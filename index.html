@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Devil May Cry - Sign In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <style>
       body {
         margin: 0;
@@ -95,12 +96,8 @@
       }
 
       #forgotPassword {
-        display: none;
-      }
-
-      .forgot-pass{
-        text-align: center;
-        margin-top: 20px;
+        text-align: right;
+        margin-bottom: 20px;
         color: #ff6666;
         text-decoration: none;
       }
@@ -125,15 +122,19 @@
     <div id="content">
       <img data-tenant-branding-logo="true" alt="Company Logo" style="min-width: 310px;" />
       <div id="api"></div>
-      <div class="forgot-pass">
-      <a href="https://fiducita.b2clogin.com/fiducita.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_PasswordReset&client_id=2ddbc195-f008-40d7-914c-d16b5d1d03f8&nonce=defaultNonce&redirect_uri=https%3A%2F%2Fjwt.ms&scope=openid&response_type=code&prompt=login"">
-        Forgot your password?
-      </a>
-    </div>
     </div>
     <img
       data-tenant-branding-background="true"
       style="width: 100vw; height: 99vh"
     />
+
+    <script>
+      window.onload = function() {
+        const forgotPasswordLink = document.getElementById('forgotPassword');
+        if (forgotPasswordLink) {
+          forgotPasswordLink.href = 'https://fiducita.b2clogin.com/fiducita.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_PasswordReset&client_id=2ddbc195-f008-40d7-914c-d16b5d1d03f8&nonce=defaultNonce&redirect_uri=https%3A%2F%2Fjwt.ms&scope=openid&response_type=code&prompt=login';
+        }
+      }
+    </script>
   </body>
 </html>
