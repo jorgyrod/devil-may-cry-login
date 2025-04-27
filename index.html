@@ -8,8 +8,7 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: url('https://fiducita.b2clogin.com/static/tenant/templates/default/background.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #0D0D0D;
             color: #ffffff;
         }
 
@@ -23,10 +22,17 @@
             z-index: -1;
         }
 
+        #content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
         #api {
             background: rgba(0, 0, 0, 0.85);
             max-width: 400px;
-            margin: 5% auto;
+            width: 100%;
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 0 15px #C8102E;
@@ -108,12 +114,12 @@
 </head>
 <body>
     <div class="background-overlay"></div>
-    <div id="header">{{header}}</div>
-    <div id="content">
-        <div id="api">{{api}}</div>
-        <div id="body">{{body}}</div>
-        <div id="error">{{error}}</div>
-    </div>
-    <div id="footer">{{footer}}</div>
+
+    {{header}}
+    {{body}}
+    {{error}}
+    {{api}}
+    {{footer}}
+
 </body>
 </html>
