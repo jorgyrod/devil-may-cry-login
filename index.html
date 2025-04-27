@@ -28,11 +28,6 @@
             box-shadow: 0 0 15px #C8102E;
         }
 
-        #api img {
-            display: block;
-            margin: 0 auto 20px;
-            width: 120px;
-        }
 
         #api h1 {
             text-align: center;
@@ -50,13 +45,20 @@
 
         #api input[type="email"],
         #api input[type="password"] {
-            width: 100%;
+            width: 95%;
             padding: 10px;
             margin-bottom: 20px;
             border: none;
             border-radius: 5px;
             background: #1c1c1c;
             color: white;
+        }
+
+        #password-label{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 15px;
         }
 
         #api button[type="submit"] {
@@ -90,17 +92,22 @@
         }
 
         #forgotPassword {
-            display: block;
             text-align: right;
             margin-bottom: 20px;
             color: #FF6666;
             text-decoration: none;
         }
+
+        #createAccount{
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
-    <div id="api"></div>
-    <img data-tenant-branding-background="true" />
-    <img data-tenant-branding-logo="true" alt="Company Logo" />
+    <div id="content">
+        <div id="api"></div>
+        <img data-tenant-branding-background="true" />
+        <img data-tenant-branding-logo="true" alt="Company Logo" />
+    </div>
 </body>
 </html>
