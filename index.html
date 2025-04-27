@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>{{pageTitle}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devil May Cry - Sign In</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             margin: 0;
@@ -24,7 +23,7 @@
             z-index: -1;
         }
 
-        .login-container {
+        #api {
             background: rgba(0, 0, 0, 0.85);
             max-width: 400px;
             margin: 5% auto;
@@ -33,33 +32,28 @@
             box-shadow: 0 0 15px #C8102E;
         }
 
-        .logo img {
+        #api img {
             display: block;
             margin: 0 auto 20px;
             width: 120px;
         }
 
-        h1 {
+        #api h1 {
             text-align: center;
             margin-bottom: 10px;
             font-size: 28px;
             color: #C8102E;
         }
 
-        .subtitle {
+        #api p.subtitle {
             text-align: center;
             margin-bottom: 30px;
             font-size: 16px;
             color: #cccccc;
         }
 
-        form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        form input {
+        #api input[type="email"],
+        #api input[type="password"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -69,7 +63,7 @@
             color: white;
         }
 
-        .forgot-password {
+        #api .forgot-password {
             display: block;
             text-align: right;
             margin-bottom: 20px;
@@ -77,11 +71,11 @@
             text-decoration: none;
         }
 
-        .forgot-password:hover {
+        #api .forgot-password:hover {
             text-decoration: underline;
         }
 
-        .sign-in-btn {
+        #api button[type="submit"] {
             width: 100%;
             padding: 12px;
             background-color: #C8102E;
@@ -92,50 +86,34 @@
             cursor: pointer;
         }
 
-        .sign-in-btn:hover {
+        #api button[type="submit"]:hover {
             background-color: #E60026;
         }
 
-        .signup-link {
+        #api .signup-link {
             text-align: center;
             margin-top: 20px;
             font-size: 14px;
         }
 
-        .signup-link a {
+        #api .signup-link a {
             color: #FF6666;
             text-decoration: none;
         }
 
-        .signup-link a:hover {
+        #api .signup-link a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="background-overlay"></div>
-    <div class="login-container">
-        <div class="logo">
-            <img src="https://fiducita.b2clogin.com/static/tenant/templates/default/logo.svg" alt="Devil May Cry Logo">
-        </div>
-        <h1>Welcome, Demon Hunter!</h1>
-        <p class="subtitle">Sign in with your Hunter credentials to continue the battle.</p>
-
-        <form id="loginForm">
-            <label for="email">Hunter Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-
-            <label for="password">Secret Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-            <a class="forgot-password" href="#">Recover your power</a>
-
-            <button type="submit" class="sign-in-btn">Enter the battlefield</button>
-
-            <div class="signup-link">
-                Don't have a hunter account? <a href="#">Join now</a>
-            </div>
-        </form>
+    <div id="header">{{header}}</div>
+    <div id="content">
+        <div id="api">{{api}}</div>
+        <div id="body">{{body}}</div>
+        <div id="error">{{error}}</div>
     </div>
+    <div id="footer">{{footer}}</div>
 </body>
 </html>
