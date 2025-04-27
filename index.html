@@ -19,9 +19,12 @@
             height: 100vh;
         }
 
+        #subcontent{
+            position: absolute;
+        }
+
         #api {
             background: rgba(0, 0, 0, 0.85);
-            position: absolute;
             max-width: 400px;
             width: 100%;
             padding: 40px;
@@ -106,13 +109,24 @@
         .divider, .create{
             text-align: center;
         }
+
+        .header-banner{
+            display: flex;
+            justify-content: center;
+            max-height: 75px;
+        }
     </style>
 </head>
 <body>
     <div id="content">
-        <div id="api"></div>
-        <img data-tenant-branding-background="true" />
-        <!-- <img data-tenant-branding-logo="true" alt="Company Logo" /> -->
+        <div id="subcontent">
+            <div id="api">
+                <div class="header-banner">
+                    <img data-tenant-branding-logo="true" alt="Company Logo" />
+                </div>
+            </div>
+        </div>
+        <img data-tenant-branding-background="true" style="width: 100vw; height: 99vh;"/>
     </div>
 </body>
 </html>
