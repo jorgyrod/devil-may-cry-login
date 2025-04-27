@@ -1,132 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Devil May Cry - Sign In</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0D0D0D;
-            color: #ffffff;
-        }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #0d0d0d;
+        color: #ffffff;
+      }
 
-        #content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+      #content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+      }
 
-        #subcontent{
-            position: absolute;
-        }
+      #api {
+        background: rgba(0, 0, 0, 0.85);
+        max-width: 400px;
+        width: 100%;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px #c8102e;
+      }
 
-        #api {
-            background: rgba(0, 0, 0, 0.85);
-            max-width: 400px;
-            width: 100%;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px #C8102E;
-        }
+      #api h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 28px;
+        color: #c8102e;
+      }
 
+      #api p.subtitle {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 16px;
+        color: #cccccc;
+      }
 
-        #api h1 {
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 28px;
-            color: #C8102E;
-        }
+      #api input[type="email"],
+      #api input[type="password"] {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        background: #1c1c1c;
+        color: white;
+      }
 
-        #api p.subtitle {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 16px;
-            color: #cccccc;
-        }
+      .password-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 15px;
+      }
 
-        #api input[type="email"],
-        #api input[type="password"] {
-            width: 95%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 5px;
-            background: #1c1c1c;
-            color: white;
-        }
+      #api button[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #c8102e;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        color: white;
+        cursor: pointer;
+      }
 
-        .password-label{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 15px;
-        }
+      #api button[type="submit"]:hover {
+        background-color: #b1001d;
+      }
 
-        #api button[type="submit"] {
-            width: 100%;
-            padding: 12px;
-            background-color: #C8102E;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            color: white;
-            cursor: pointer;
-        }
+      #api a {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+      }
 
-        #api button[type="submit"]:hover {
-            background-color: #b1001d;
-        }
+      #api a {
+        color: #ff6666;
+        text-decoration: none;
+      }
 
-        #api a {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
+      #api a:hover {
+        text-decoration: underline;
+      }
 
-        #api a{
-            color: #FF6666;
-            text-decoration: none;
-        }
+      #forgotPassword {
+        text-align: right;
+        margin-bottom: 20px;
+        color: #ff6666;
+        text-decoration: none;
+      }
 
-        #api a:hover {
-            text-decoration: underline;
-        }
+      #createAccount {
+        margin-left: 10px;
+      }
 
-        #forgotPassword {
-            text-align: right;
-            margin-bottom: 20px;
-            color: #FF6666;
-            text-decoration: none;
-        }
+      .divider,
+      .create {
+        text-align: center;
+      }
 
-        #createAccount{
-            margin-left: 10px;
-        }
-
-        .divider, .create{
-            text-align: center;
-        }
-
-        .header-banner{
-            display: flex;
-            justify-content: center;
-            max-height: 75px;
-        }
+      .header-banner {
+        display: flex;
+        justify-content: center;
+        max-height: 75px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="content">
-        <div id="subcontent">
-            <div id="api">
-                <div class="header-banner">
-                    <img data-tenant-branding-logo="true" alt="Company Logo" />
-                </div>
-            </div>
-        </div>
-        <img data-tenant-branding-background="true" style="width: 100vw; height: 99vh;"/>
+      <img data-tenant-branding-logo="true" alt="Company Logo" />
+      <div id="api"></div>
     </div>
-</body>
+    <img
+      data-tenant-branding-background="true"
+      style="width: 100vw; height: 99vh"
+    />
+  </body>
 </html>
