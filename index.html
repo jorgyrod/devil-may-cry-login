@@ -12,16 +12,6 @@
             color: #ffffff;
         }
 
-        .background-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: -1;
-        }
-
         #content {
             display: flex;
             justify-content: center;
@@ -69,18 +59,6 @@
             color: white;
         }
 
-        #api .forgot-password {
-            display: block;
-            text-align: right;
-            margin-bottom: 20px;
-            color: #FF6666;
-            text-decoration: none;
-        }
-
-        #api .forgot-password:hover {
-            text-decoration: underline;
-        }
-
         #api button[type="submit"] {
             width: 100%;
             padding: 12px;
@@ -93,26 +71,36 @@
         }
 
         #api button[type="submit"]:hover {
-            background-color: #E60026;
+            background-color: #b1001d;
         }
 
-        #api .signup-link {
+        #api a {
             text-align: center;
             margin-top: 20px;
             font-size: 14px;
         }
 
-        #api .signup-link a {
+        #api a{
             color: #FF6666;
             text-decoration: none;
         }
 
-        #api .signup-link a:hover {
+        #api a:hover {
             text-decoration: underline;
+        }
+
+        #forgotPassword {
+            display: block;
+            text-align: right;
+            margin-bottom: 20px;
+            color: #FF6666;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <div id="api"></div>
+    <img data-tenant-branding-background="true" />
+    <img data-tenant-branding-logo="true" alt="Company Logo" />
 </body>
 </html>
