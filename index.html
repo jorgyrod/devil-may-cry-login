@@ -21,6 +21,7 @@
 
         #api {
             background: rgba(0, 0, 0, 0.85);
+            position: absolute;
             max-width: 400px;
             width: 100%;
             padding: 40px;
@@ -54,7 +55,7 @@
             color: white;
         }
 
-        #password-label{
+        .password-label{
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -101,13 +102,17 @@
         #createAccount{
             margin-left: 10px;
         }
+
+        .divider, .create{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div id="content">
         <div id="api"></div>
         <img data-tenant-branding-background="true" />
-        <img data-tenant-branding-logo="true" alt="Company Logo" />
+        <!-- <img data-tenant-branding-logo="true" alt="Company Logo" /> -->
     </div>
 </body>
 </html>
